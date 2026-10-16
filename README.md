@@ -5,7 +5,7 @@
 **Individual Submission Repository:** [aditya25058/ldls-project](https://github.com/aditya25058/ldls-project)  
 **Shared Team Repository:** [hhiten10/ldls-project](https://github.com/hhiten10/ldls-project)  
 **Assigned Individual Domains:** **Domain 7 (JSON / API Responses)** and **Domain 12 (Agent / Chat Logs)**  
-**Platform & Environment:** CPU execution with Llama-3.2-1B-Instruct (`Q4_K_M`) on H100 Server (`192.168.3.214`, Linux, GCC 13.3.0, CMake 4.3.3) using pinned `llama.cpp` (commit `08ffba2`)  
+**Platform & Environment:** CPU execution with Llama-3.2-1B-Instruct (`Q4_K_M`) using pinned `llama.cpp` (commit `08ffba2`)  
 
 ---
 
@@ -257,5 +257,4 @@ python tools/report.py --domain chatlogs
 | **Individual Submission** | Report | `README.md` in repository |
 | **Team Submission** | Shared Collaborative Repo | [`https://github.com/hhiten10/ldls-project`](https://github.com/hhiten10/ldls-project) |
 | **Team Submission** | One-Slide Summary | Summary slide covering Domains 7 & 12 + partner domains (stats, tests, CPU runtimes) |
-| **Compute Environment** | Working Directory | `/home/palakm/MoEServingSim/aditya/ldls-project/` (H100 Server: `192.168.3.214`) |
 
