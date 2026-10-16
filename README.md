@@ -2,7 +2,8 @@
 ## Project 0 Week 1 — Individual Report & Repository
 
 **Student Name:** Aditya Sai Teja B  
-**GitHub Profile & Submission Repository:** [aditya25058/ldls-project](https://github.com/aditya25058/ldls-project)  
+**Individual Submission Repository:** [aditya25058/ldls-project](https://github.com/aditya25058/ldls-project)  
+**Shared Team Repository:** [hhiten10/ldls-project](https://github.com/hhiten10/ldls-project)  
 **Assigned Individual Domains:** **Domain 7 (JSON / API Responses)** and **Domain 12 (Agent / Chat Logs)**  
 **Platform & Environment:** CPU-only execution with Llama-3.2-1B-Instruct (`Q4_K_M`) using pinned `llama.cpp` (commit `08ffba2`)  
 
@@ -184,6 +185,7 @@ Structured tree attention introduces significant context and compute savings:
 ## 6. Collaborative Team Foundations
 
 This repository incorporates the shared infrastructure established collaboratively across the project team:
+- **Shared Team Repository:** [`https://github.com/hhiten10/ldls-project`](https://github.com/hhiten10/ldls-project) — aggregating all domain parsers, driver source, and cross-team test suites.
 - **Shared C++ Driver:** [`driver/ldls_driver.cpp`](driver/ldls_driver.cpp) providing the CLI commands `twoseq`, `run`, `test`, `bench`, `noise`, and `tokenize`.
 - **JSON Schema:** [`schema/tree.schema.json`](schema/tree.schema.json) and documentation [`schema/SCHEMA.md`](schema/SCHEMA.md).
 - **Automated Verification:** [`tests/run_tests.py`](tests/run_tests.py) and [`tools/report.py`](tools/report.py).
@@ -248,6 +250,12 @@ python tools/report.py --domain chatlogs
 
 ## 8. Artifacts & Deliverables
 
-- **Git Repository:** [https://github.com/aditya25058/ldls-project](https://github.com/aditya25058/ldls-project)
-- **Submission ZIP Archive:** `ldls-project-aditya25058.zip` (clean archive containing driver source, parsers, test suites, schemas, reports, and documentation; excludes build/model binaries).
-- **HPC Cluster Directory:** `/home/bapic_iiitd/2_group/aditya/ldls-project/` (PARAM Rudra).
+| Submission Track | Deliverable | Details / Links |
+|---|---|---|
+| **Individual Submission** | Personal Git Repository | [`https://github.com/aditya25058/ldls-project`](https://github.com/aditya25058/ldls-project) |
+| **Individual Submission** | ZIP Archive | `ldls-project-aditya25058.zip` (clean archive, excluding binary weights & builds) |
+| **Individual Submission** | Report | `README.md` in repository |
+| **Team Submission** | Shared Collaborative Repo | [`https://github.com/hhiten10/ldls-project`](https://github.com/hhiten10/ldls-project) |
+| **Team Submission** | One-Slide Summary | Summary slide covering Domains 7 & 12 + partner domains (stats, tests, CPU runtimes) |
+| **HPC Evidence** | Cluster Directory | `/home/bapic_iiitd/2_group/aditya/ldls-project/` (PARAM Rudra) |
+
