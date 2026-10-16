@@ -42,14 +42,22 @@ In this system:
 ## 1. Invariant Architecture
 
 ### 1.1 Sequence ID Hierarchy
-`llama.cpp` evaluates attention masks by comparing the sequence IDs assigned to the query token against the sequence IDs stored in each KV cache cell. To ensure that token $t \in \text{Node}(N)$ attends exclusively to its ancestors:
-$$\text{seq\_ids}(N) = \{\text{seq}(N)\} \cup \text{descendants}(N)$$
-The query token uses its primary sequence ID $\text{seq}(N)$, which matches only the sequence sets of itself and its ancestors. Sibling subtrees have disjoint descendant sets and cannot attend to one another.
+`llama.cpp` evaluates attention masks by comparing the sequence IDs assigned to the query token against the sequence IDs stored in each KV cache cell. To ensure that token $t \in \mathrm{Node}(N)$ attends exclusively to its ancestors:
+
+$$\mathrm{seq\_ids}(N) = \{\mathrm{seq}(N)\} \cup \mathrm{descendants}(N)$$
+
+*(In code notation: `seq_ids(N) = {seq(N)} ∪ descendants(N)`)*
+
+The query token uses its primary sequence ID $\mathrm{seq}(N)$, which matches only the sequence sets of itself and its ancestors. Sibling subtrees have disjoint descendant sets and cannot attend to one another.
 
 ### 1.2 Tree Position Allocation
 To avoid position gaps while preserving sequence continuity:
-$$\text{pos}(\text{child.first}) = \text{pos}(\text{parent.last}) + 1$$
-Sibling subtrees occupy overlapping token position ranges $[P_{\text{start}}, P_{\text{end}}]$. Because attention is isolated via sequence IDs, this overlap introduces zero cross-talk, while making KV cache eviction of a sibling completely position-invariant to remaining siblings.
+
+$$\mathrm{pos}(\mathrm{child.first}) = \mathrm{pos}(\mathrm{parent.last}) + 1$$
+
+*(In code notation: `pos(child.first) = pos(parent.last) + 1`)*
+
+Sibling subtrees occupy overlapping token position ranges $[P_{\mathrm{start}}, P_{\mathrm{end}}]$. Because attention is isolated via sequence IDs, this overlap introduces zero cross-talk, while making KV cache eviction of a sibling completely position-invariant to remaining siblings.
 
 ### 1.3 Sequence Budget & Merging
 Hardware and `llama.cpp` constraints limit sequence IDs to $< 63$ (sequence 63 is reserved for the scoped query). To guarantee this invariant:
