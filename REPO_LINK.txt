@@ -1,0 +1,16 @@
+Project 0 Week 1 Submission
+
+Student: Aditya Sai Teja B
+GitHub Profile: https://github.com/aditya25058
+Individual Submission Repository: https://github.com/aditya25058/ldls-project
+Collaborative Team Repository: https://github.com/hhiten10/ldls-project
+
+Domains Included:
+- Domain 7: JSON / API responses (Aditya Sai Teja B)
+- Domain 12: Agent / Chat logs (Aditya Sai Teja B)
+- Domain 3: Markdown (Team collaborative)
+- Domain 1: HTML (Team collaborative)
+- Domain 8: XML (Team collaborative)
+
+Full report and documentation are in README.md.
+Team summary slide is in Report.pdf.
